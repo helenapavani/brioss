@@ -1,0 +1,43 @@
+<div class="container">
+
+	<div class="conteudo">
+
+		<div class="title">
+			<h1>Esqueci minha senha</h1>
+		</div>
+		<ng-container>
+			<p *ngIf="enviarCodigo">
+				Enviamos um código para o seu e-mail, por favor, insira-o no campo abaixo
+				Vamos enviar um códigio para o e-mail cadastrado.
+			</p>
+			<p *ngIf="!enviarCodigo">
+				Vamos enviar um códigio para o e-mail cadastrado.
+			</p>
+		</ng-container>
+
+
+		<ng-container *ngIf="!enviarCodigo">
+
+
+
+			<div class="container-codigo">
+				<input type="text" name="codigoVerificacao" id="codigoVerificacao" placeholder="Código">
+				<div class="container-btn">
+					<button>CONFIRMAR CÓDIGO</button>
+				</div>
+			</div>
+		</ng-container>
+
+		<div class="form-container" *ngIf="enviarCodigo">
+			<form>
+				<input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+				<input type="email" name="emailConfirm" id="emailConfirm" placeholder="Confirme seu e-mail ">
+
+				<div class="container-btn">
+					<button [disabled]="verificarEmail()">Enviar código</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>

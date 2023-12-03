@@ -1,0 +1,48 @@
+<div class="container">
+	<ng-container *ngIf="!steps[5]">
+
+		<div class="title">
+			<h1>CARRINHO DE COMPRAS</h1>
+		</div>
+		<hr class="linha">
+
+
+		<div class="conteudo">
+
+			<div class="wrapper">
+				<div class="container-list-card" *ngFor="let cartItem of cartItems">
+					<app-list-card [cartItem]="cartItem"></app-list-card>
+				</div>
+				<app-cupom-desconto (cupom)="cupom($event)"></app-cupom-desconto>
+				<div class="subtotal">
+					<app-preco-informacoes [frete]="frete" [cartTotal]="cartTotal" [desconto]="desconto"></app-preco-informacoes>
+				</div>
+			</div>
+
+			<div class="container-informacoes">
+				<section>
+					<section class="informacoes" fxLayout="row">
+						<div class="observacao">
+							<h1>Adicionar Observações ao pedido</h1>
+							<textarea [(ngModel)]="dadosDoPedido.observacao" name="observacao" id="" cols="30" rows="10"
+								placeholder="Observações"></textarea>
+						</div>
+					</section>
+					<app-escolher-entrega [steps]="steps"></app-escolher-entrega>
+				</section>
+
+			</div>
+
+		</div>
+
+		<div class="btns-container" fxLayout="row" fxLayoutAlign="end center">
+			<a routerLink="/">Continuar comprando</a>
+			<button (click)="nextStep()">{{irParaPagamento()}}</button>
+		</div>
+
+	</ng-container>
+
+	<ng-container *ngIf="steps[5]">
+		<app-detalhes-pedido [dadosPedidos]="dadosDoPedido"></app-detalhes-pedido>
+	</ng-container>
+</div>

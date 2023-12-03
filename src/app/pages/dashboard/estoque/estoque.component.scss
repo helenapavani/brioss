@@ -1,0 +1,39 @@
+:host {
+	.container {
+		h1 {
+			color: #8c673a;
+			font-family: Inter;
+			font-size: 30px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: normal;
+		}
+	}
+	.btn-container {
+		display: flex;
+		padding: 5px;
+		margin-bottom: 10px;
+		justify-content: flex-end;
+		align-items: center;
+		.item-btn {
+			background: #d9d9d9;
+			border: none !important;
+			cursor: pointer;
+			border-radius: 50%;
+			background: #785123;
+			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+			height: 25px;
+			width: 25px;
+			color: #d9d9d9;
+		}
+		span {
+			margin-left: 10px;
+			color: #8c673a;
+			font-family: Inter;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: normal;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+:host {
+	.container {
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+		margin-left: 7px;
+		.btn {
+			cursor: pointer;
+		}
+		.btn:disabled {
+			pointer-events: none;
+		}
+
+		h1 {
+			font: 400 normal 30px / normal;
+		}
+
+		input {
+			height: 50px;
+
+			background: #fff;
+			padding-left: 20px;
+			margin-bottom: 17px;
+
+			border-radius: 5px;
+			border: 1px solid #96652c;
+			background: #fff;
+		}
+
+		button {
+			display: flex;
+			width: 249px;
+			padding: 15px 85px 15px 77px;
+			align-items: center;
+			border-radius: 10px;
+			border: 1px solid #d9d9d9;
+			color: #fff;
+
+			font: 700 normal 20px / normal;
+
+			background: #737373;
+			align-self: flex-end;
+		}
+	}
+}

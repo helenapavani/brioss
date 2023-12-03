@@ -1,0 +1,21 @@
+<div class="container_status">
+
+	<div class="content">
+		<h1>Status do Pedido</h1>
+		<div class="linha"></div>
+
+		<div class="card_status">
+			<p class="mensagem">Seu pedido foi aceito pelo estabelecimento e já está em preparo</p>
+			<div class="progresso">
+				<span>Pedido #{{pedido?.id}}</span><span>Hora: {{obterHorarioAtual()}}</span>
+			</div>
+			<div class="progress_bar">
+
+				<progress [value]="progressoPorcentagem" max="100"> </progress>
+			</div>
+
+			<p class="status">{{pedido?.statusPedido}}</p>
+
+		</div>
+	</div>
+</div>

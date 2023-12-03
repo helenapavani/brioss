@@ -1,0 +1,145 @@
+:host {
+	.container {
+		display: flex;
+		max-width: 1400px;
+		margin: 0 auto;
+		flex-direction: column;
+		padding-left: 70px;
+		padding-right: 70px;
+		.conteudo {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			width: 100%;
+
+			.wrapper {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+				margin-right: 50px;
+				app-cupom-desconto {
+					display: flex;
+					justify-content: flex-end;
+				}
+			}
+
+			.container-list-card {
+				display: flex;
+				margin-bottom: 20px;
+				width: max-content;
+				flex-direction: column;
+			}
+		}
+
+		.linha {
+			background: #96652c;
+			margin-bottom: 59px;
+		}
+		.informacoes {
+			margin-bottom: 50px;
+		}
+		.container-informacoes {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
+			flex: 1;
+		}
+
+		.observacao {
+			h1 {
+				margin-left: 23px;
+				color: #8c673a;
+				font-family: Inter;
+				font-size: 25px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: normal;
+			}
+		}
+
+		.title {
+			margin-bottom: 16px;
+			margin-top: 100px;
+			h1 {
+				color: #8c673a;
+				font-family: Inter;
+				font-size: 30px;
+				font-style: normal;
+				font-weight: 800;
+				line-height: normal;
+			}
+		}
+
+		.subtotal {
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 48px;
+			margin-top: 48px;
+		}
+
+		textarea {
+			padding: 10px 18px;
+			resize: none;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			margin-left: 7px;
+			margin-top: 15px;
+			width: 500px;
+			height: 199px;
+			border-radius: 5px;
+			border: 1px solid #96652c;
+			background: #fff;
+		}
+
+		.btns-container {
+			display: flex;
+			margin-bottom: 75px;
+			margin-top: 114px;
+
+			a {
+				text-decoration: none;
+				color: #8c673a;
+				font-family: Inter;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 800;
+				line-height: normal;
+				margin-right: 50px;
+			}
+
+			button {
+				display: inline-flex;
+				cursor: pointer;
+
+				margin-right: 70px;
+				padding: 15px 77px;
+				justify-content: center;
+				align-items: center;
+				border-radius: 10px;
+				background: #96652c;
+				box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+				color: #fff;
+
+				color: #fff;
+				font-family: Inter;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+			}
+		}
+
+		.data-entrega-container {
+			h1 {
+				font-size: 30px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+			}
+		}
+	}
+}

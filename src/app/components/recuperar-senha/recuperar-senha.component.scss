@@ -1,0 +1,120 @@
+:host {
+	.container {
+		max-width: 1440px;
+
+		padding: 50px 190px;
+		margin: 0 auto;
+		.conteudo {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 30px 28px;
+			width: 100%;
+			max-width: 500px;
+			margin: 0 auto;
+
+			margin-top: 221px;
+			margin-bottom: 120px;
+
+			border-radius: 10px;
+			background: #f8f8f8;
+			box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+			p {
+				color: #8c673a;
+
+				width: 311px;
+				text-align: center;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: normal;
+			}
+		}
+
+		.title {
+			h1 {
+				color: #8c673a;
+
+				text-align: center;
+				font-size: 25px;
+				font-style: normal;
+				font-weight: 800;
+				line-height: normal;
+			}
+		}
+		.container-codigo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			input {
+				border-radius: 5px;
+				border: 2px solid #8c673a;
+				background: #faf9f9;
+			}
+		}
+
+		.form-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			max-width: 500px;
+			margin: 0 auto;
+
+			form {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+
+				input {
+					display: flex;
+					margin-bottom: 20px;
+					width: 100%;
+					max-width: 400px;
+					border: 1px solid red;
+
+					padding: 17px 0px 17px 21px;
+					align-items: center;
+					border-radius: 5px;
+					border: 2px solid #8c673a;
+					background: #faf9f9;
+					color: #8b8b8b;
+
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+				}
+			}
+		}
+		.container-btn {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 10px;
+			margin-bottom: 34px;
+
+			button {
+				display: inline-flex;
+				padding: 15px 58px;
+				justify-content: center;
+				align-items: center;
+				border-radius: 10px;
+				background: #96652c;
+				box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+				color: #fff;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+			}
+		}
+	}
+}

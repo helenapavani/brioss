@@ -1,0 +1,120 @@
+:host {
+	.container {
+		max-width: 1440px;
+		margin: 0 auto;
+
+		.banner {
+			max-width: 1300px;
+			margin: 0 auto;
+			margin-top: 60px;
+
+			.imagem {
+				margin: 0 auto;
+			}
+		}
+		::ng-deep.mat-mdc-tab-body-content {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 26px;
+			padding: 4px 4px 16px 62px;
+		}
+		.container-cardapio {
+			padding: 80px 100px;
+
+			.controls-container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.select {
+				width: 200px;
+				height: 64px;
+				display: inline-flex;
+				justify-items: center;
+				justify-content: space-around;
+
+				border-radius: 5px;
+				border: 2px solid #8c673a;
+				background: #faf9f9;
+				padding: 23px 30px 13px 12px;
+				p {
+					color: #785123;
+
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+				}
+			}
+
+			input[type="search"] {
+				width: 485px;
+				height: 64px;
+				padding: 15px;
+				border-radius: 5px;
+				border: 2px solid #8c673a;
+				background: #faf9f9;
+			}
+			input[type="search"]::placeholder {
+				color: #8b8b8b;
+
+				font-size: 20px;
+				font-style: italic;
+				font-weight: 400;
+				line-height: normal;
+			}
+
+			h1 {
+				color: #8c673a;
+
+				font-size: 30px;
+				font-style: normal;
+				font-weight: 800;
+				line-height: normal;
+			}
+			.modoEntrega {
+				select {
+					border-radius: 5px;
+					border: 2px solid #8c673a;
+					background: #faf9f9;
+				}
+			}
+			.horario {
+				padding: 12px 12px 20px 20px;
+				width: 200px;
+				height: 64px;
+
+				border-radius: 5px;
+				border: 2px solid #8c673a;
+				background: #faf9f9;
+				p {
+					color: #785123;
+					font-size: 15px;
+					font-style: italic;
+					font-weight: 500;
+					line-height: normal;
+				}
+			}
+		}
+
+		.container-card-details {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 40px;
+			margin-top: 80px;
+			width: 100%;
+			justify-content: space-around;
+		}
+
+		.container-card-details-big {
+			width: max-content;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 40px;
+			margin-top: 80px;
+			flex-direction: row;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+<div class="container" cdkDrag>
+
+	<h1 class="title">Pedido #{{ pedido.id}}</h1>
+	<p class="infos">
+		<span *ngFor="let item of itens">{{item}} <br></span>
+	</p>
+
+	<p class="obs">
+		{{pedido.observacao||"Nenhuma OBS"}}
+	</p>
+
+
+	<div class="status">
+		<p class="modoEntrega">
+			{{pedido.modoEntrega}}
+		</p>
+
+		<div class="preco">
+			<p id="total">Total: </p>
+			<span>{{pedido.total | currency:"BRL"}}</span>
+		</div>
+	</div>
+
+</div>

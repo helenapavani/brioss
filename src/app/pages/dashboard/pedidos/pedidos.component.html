@@ -1,0 +1,37 @@
+<div class="container">
+
+	<div class="title">
+		<h1>Histórico de pedidos</h1>
+		<div class="linha"></div>
+	</div>
+
+	<div cdkDropListGroup>
+		<div class="conteudo">
+
+			<div class="example-container container-novos-pedidos">
+
+				<div class="title">
+					<h1>Novos Pedidos</h1>
+				</div>
+
+				<div class="linha"></div>
+
+				<div cdkDropList [cdkDropListData]="todosPedidos" class="example-list" (cdkDropListDropped)="drop($event)">
+					<app-list-pedido class="example-box" *ngFor="let item of todosPedidos" [pedido]="item">
+					</app-list-pedido>
+				</div>
+			</div>
+
+			<div class="example-container container-concluidos">
+
+				<h1>Pedidos Concluídos</h1>
+				<div class="linha"></div>
+
+				<div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)">
+					<app-list-pedido class="example-box" *ngFor="let item of done" [pedido]="item" cdkDrag></app-list-pedido>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+	<h1>Editar informações</h1>
+	<div class="linha"></div>
+	<form [formGroup]="usuarioForm">
+		<div class="form__container">
+			<input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Nome" formControlName="nomeCompleto">
+			<input type="email" name="email" id="email" placeholder="E-mail" formControlName="email">
+			<input type="password" name="senha" id="senha" placeholder="Senha" formControlName="senha">
+		</div>
+
+		<div class="form__endereco">
+			<h1>Endereço de entrega:</h1>
+			<div class="linha"></div>
+			<div class="form-input">
+				<input type="text" name="rua" id="rua" placeholder="Rua" formControlName="rua">
+
+				<input type="text" class="numero" name="numero" id="numero" placeholder="Número" formControlName="numero">
+				<input type="text" name="bairro" id="bairro" placeholder="Bairro" formControlName="bairro">
+				<input type="text" name="cidade" id="cidade" placeholder="Cidade" formControlName="cidade">
+				<input type="text" name="cep" id="cep" placeholder="CEP" (input)="cep = formatarCep(cep)" formControlName="cep"
+					(keydown)="limitarTamanho($event)">
+			</div>
+			<div class="container__btn">
+				<button type="button" class="btn" (click)="salvar()">SALVAR</button>
+			</div>
+		</div>
+	</form>
+</div>

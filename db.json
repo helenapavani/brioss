@@ -1,0 +1,65 @@
+{
+	"bolos": [
+		{
+			"id": 1,
+			"titulo": "Bolo de milho",
+			"detalhes": "detalhes detalhes detalhes"
+		},
+		{
+			"id": 2,
+			"titulo": "Bolo de milho",
+			"detalhes": "detalhes detalhes detalhes"
+		},
+		{
+			"id": 3,
+			"titulo": "Bolo de milho",
+			"detalhes": "detalhes detalhes detalhes"
+		},
+		{
+			"id": 4,
+			"titulo": "Bolo de milho",
+			"detalhes": "detalhes detalhes detalhes"
+		},
+		{
+			"id": 5,
+			"titulo": "Bolo de milho",
+			"detalhes": "detalhes detalhes detalhes"
+		},
+		{
+			"id": 6,
+			"titulo": "Bolo de milho",
+			"detalhes": "detalhes detalhes detalhes"
+		},
+		{
+			"id": 7,
+			"titulo": "Bolo de milho",
+			"detalhes": "detalhes detalhes detalhes"
+		},
+		{
+			"id": 8,
+			"titulo": "Bolo de milho",
+			"detalhes": "detalhes detalhes detalhes"
+		},
+		{
+			"id": 9,
+			"titulo": "Bolo de milho",
+			"detalhes": "detalhes detalhes detalhes"
+		},
+		{
+			"id": 10,
+			"titulo": "Bolo de milho",
+			"detalhes": "detalhes detalhes detalhes"
+		}
+	],
+	"usuarios": [
+		{
+			"id": 1,
+			"nomeCompleto": "tiago",
+			"email": "tiago@gmail.com",
+			"emailConfirmacao": "tiago@gmail.com",
+			"senha": "sdasd",
+			"senhaConfirmacao": "sdasd",
+			"role": "cliente"
+		}
+	]
+}

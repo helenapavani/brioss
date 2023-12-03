@@ -1,0 +1,49 @@
+<div class="cadastro_container">
+
+
+	<div class="form-cadastro">
+		<div class="title">
+			<h1>CADASTRO</h1>
+			<p *ngIf="cadastroSucesso">Cadastro concluído com sucesso, faça login para continuar</p>
+		</div>
+		<form [formGroup]="cadastroForm" (ngSubmit)="cadastrar()">
+			<input type="text" formControlName="nomeCompleto" placeholder="Nome completo" required>
+			<input type="email" formControlName="email" placeholder="Digite seu e-mail" (blur)="camposTocados.email = true"
+				required>
+			<input type="email" formControlName="emailConfirm" placeholder="Confirme seu e-mail"
+				(blur)="camposTocados.emailConfirm = true">
+			<div *ngIf="cadastroForm.hasError('emailsDiferentes') && camposTocados.email && camposTocados.emailConfirm"
+				class="emails-diferentes-message">
+				Os emails não correspondem. Por favor, verifique.
+			</div>
+			<div class="password-input">
+				<input [type]="showPassword ? 'text' : 'password'" formControlName="senha" placeholder="Senha" required>
+				<span (click)="togglePasswordVisibility()" class="password-toggle">
+					<i class="fa" [ngClass]="{'fa-eye': showPassword, 'fa-eye-slash': !showPassword}"></i>
+				</span>
+			</div>
+
+			<!-- Adicione um elemento div para exibir a mensagem de senha fraca -->
+			<div *ngIf="cadastroForm.get('senha')?.hasError('senhaForte')" class="senha-fraca-message">
+				A senha é fraca. Por favor, inclua pelo menos 8 caracteres, números, letras maiúsculas e caracteres especiais.
+			</div>
+
+			<input type="password" formControlName="passwordConfirm" placeholder="Confirme a senha" required>
+			<div *ngIf="cadastroForm.hasError('senhasDiferentes')" class="senhas-diferentes-message">
+				As senhas não correspondem. Por favor, verifique.
+			</div>
+			<div class="esqueceu-container">
+				<input type="checkbox" formControlName="checkTermo" id="checkTermo">
+				<label for="checkTermo">Ao confirmar o cadastro, você afirma que todos os dados informados são verídicos</label>
+			</div>
+
+			<div class="container-btn">
+				<button type="submit">Confirmar cadastro</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="imagem">
+		<svg-icon src="assets/images/cadastro/cadastro.svg"></svg-icon>
+	</div>
+</div>

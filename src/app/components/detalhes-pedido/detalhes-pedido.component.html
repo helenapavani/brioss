@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="title">
+		<h1>Detalhes do pedido</h1>
+	</div>
+	<hr>
+
+	<div class="conteudo" fxLayout="row" fxLayoutAlign="space-between">
+		<div fxFlex="50%" class="pedidos-container">
+			<app-tabela-pedidos [pedidos]="dadosPedidos.cartItems"></app-tabela-pedidos>
+			<div class=" container-metodo-escolha">
+				<h1>Método de entrega</h1>
+				<app-modo-escolha></app-modo-escolha>
+			</div>
+
+			<section class="valores-container">
+				<app-preco-informacoes [frete]="dadosPedidos.frete" [cartTotal]="dadosPedidos.cartTotal"
+					[desconto]="dadosPedidos.desconto"></app-preco-informacoes>
+
+
+			</section>
+
+		</div>
+
+		<div class="observacao-container" fxFlex="50%">
+			<h1>Observações:</h1>
+
+			<textarea name="observacao" [ngModel]="dadosPedidos.observacao" id="observacao" cols="30" rows="10"
+				readonly></textarea>
+
+			<section class="section-pagamento">
+				<h1>Pagamento via cartão</h1>
+				<app-cartao-credito></app-cartao-credito>
+			</section>
+
+		</div>
+	</div>
+
+
+	<div class="btn-container">
+		<a href="">voltar</a>
+		<button (click)="concluirPedido()">CONCLUIR</button>
+	</div>
+
+
+</div>

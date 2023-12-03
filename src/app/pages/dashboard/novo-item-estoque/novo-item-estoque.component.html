@@ -1,0 +1,72 @@
+<div class="container">
+	<h1 mat-dialog-title>Adicionar novo item</h1>
+	<hr>
+	<div mat-dialog-content class="container-estoque">
+
+		<div class="conteudo">
+			<input type="text" [(ngModel)]="nomeProduto" name=" nomeProduto" id="nomeProduto" placeholder="Nome">
+			<textarea name="descricao" [(ngModel)]="descricao" id="descricao" cols="30" rows="10"
+				placeholder="Descrição"></textarea>
+			<input matTooltip="Digite preço do produto" type="number" [(ngModel)]="preco" name="valor" id="valor"
+				placeholder="Valor">
+
+			<mat-form-field matTooltip="Escolha uma categoria para cadastrar" class="custom" appearance='outline'>
+				<mat-select name="countryReactiveVaraible" [formControl]="selectedCategory" placeholder="Country">
+					<mat-option *ngFor="let categoria of categorias" [value]="categoria.short">
+						{{categoria.full}}
+					</mat-option>
+				</mat-select>
+
+			</mat-form-field>
+			<mat-checkbox [(ngModel)]="isDestaque">Marcar como destaque!</mat-checkbox>
+
+			<div class="status-container">
+				<label for="quantidade">Quantidade :</label>
+				<app-select-quantity (quantityEmitter)="escolherQuantidade($event)"></app-select-quantity>
+				<!-- <div class="quantidade-container">
+				<label for="quantidade">Quantidade</label>
+				<div class="quantidade">
+					<button (click)="diminuirQuantidade()">-</button>
+					<input type="number" [(ngModel)]="estoqueDisponivel" name="quantidades" id="" min="0" required>
+					<button (click)="diminuirQuantidade()">+</button>
+				</div>
+			</div> -->
+
+				<div class="status">
+					<p>Status :</p>
+					<button (click)="mudarStatus(true)">Ativo</button>
+					<button (click)="mudarStatus(false)">Inativo</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container-imagem">
+			<p>Selecione uma foto para seu produto:</p>
+			<div class="image">
+				<img *ngIf="productUrl" [src]="productUrl" alt="" loading="lazy">
+				<svg *ngIf="!productUrl" xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250"
+					fill="none">
+					<path
+						d="M27.7778 250C20.1389 250 13.5972 247.278 8.1528 241.833C2.70836 236.389 -0.00923568 229.852 2.35805e-05 222.222V27.7778C2.35805e-05 20.1389 2.72225 13.5972 8.16669 8.1528C13.6111 2.70836 20.1482 -0.00923568 27.7778 2.35805e-05H222.222C229.861 2.35805e-05 236.403 2.72225 241.847 8.16669C247.292 13.6111 250.009 20.1482 250 27.7778V222.222C250 229.861 247.278 236.403 241.833 241.847C236.389 247.292 229.852 250.009 222.222 250H27.7778ZM44.0667 191.244C43.0778 192.563 44.0186 194.444 45.6667 194.444H204.333C205.981 194.444 206.922 192.563 205.933 191.244L157.85 127.133C157.05 126.067 155.45 126.067 154.65 127.133L116.183 178.422C115.383 179.489 113.783 179.489 112.983 178.422L84.9333 141.022C84.1333 139.956 82.5333 139.956 81.7333 141.022L44.0667 191.244Z"
+						fill="#C8C8C8" />
+				</svg>
+			</div>
+
+			<div class="uploader">
+
+
+				<input class="inputfile" type="file" name="file" id="" (change)="onFileSelected($event)"
+					class="custom-file-input">
+
+			</div>
+		</div>
+
+
+	</div>
+
+	<div mat-dialog-actions class="btn-container">
+		<button mat-button (click)="cadastrarProduto()">Salvar</button>
+
+	</div>
+</div>

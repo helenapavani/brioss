@@ -1,0 +1,131 @@
+:host {
+	.container {
+		width: 498px;
+
+		::ng-deep.mat-mdc-text-field-wrapper {
+			border-radius: 5px;
+			border: 1px solid #96652c;
+			background: #fff;
+			width: max-content;
+		}
+
+		.data-entrega-container {
+			margin-top: 40px;
+			.form-container {
+				display: flex;
+				flex-direction: row;
+				gap: 35px;
+			}
+			h1 {
+				color: #8c673a;
+				font-family: Inter;
+				font-size: 25px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: normal;
+			}
+		}
+		.title {
+			color: #8c673a;
+			font-family: Inter;
+			font-size: 25px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+		}
+		.escolhas {
+			display: flex;
+			margin-top: 42px;
+			margin-left: 17px;
+			.delivery {
+				width: 200px;
+				height: 100px;
+				border-radius: 5px;
+				border: 1px solid #000;
+				padding: 18px 0px 0 21px;
+				background: #fff;
+				cursor: pointer;
+
+				margin-right: 30px;
+
+				p {
+					margin-bottom: 10px;
+					color: #000;
+
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+				}
+			}
+
+			.local {
+				width: 200px;
+				height: 100px;
+				border-radius: 5px;
+				border: 1px solid #96652c;
+				padding: 18px 0px 0 21px;
+				background: #fff;
+				margin-left: 30px;
+				cursor: pointer;
+				p {
+					margin-bottom: 10px;
+					color: #000;
+
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+				}
+			}
+		}
+
+		.endereco {
+			display: flex;
+			flex-direction: column;
+			margin-top: 50px;
+
+			h1 {
+				color: #8c673a;
+
+				font-size: 25px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: normal;
+			}
+			.informacoes-endereco {
+				display: flex;
+				height: 50px;
+				margin-top: 35px;
+				background: #fff;
+				border-radius: 5px;
+				border: 1px solid #96652c;
+
+				align-items: center;
+
+				input {
+					margin-right: 24px;
+					margin-left: 18px;
+				}
+				label {
+					background: #fff;
+					color: #8b8b8b;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+				}
+			}
+			span {
+				align-self: flex-end;
+				margin-top: 10px;
+				margin-right: 18px;
+				color: #8c673a;
+				font-size: 15px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+			}
+		}
+	}
+}

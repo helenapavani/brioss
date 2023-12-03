@@ -1,0 +1,42 @@
+<div class="container">
+	<div>
+		<h1 class="title">Escolha como receberá seu pedido</h1>
+	</div>
+
+	<app-modo-escolha></app-modo-escolha>
+
+	<div class="endereco" *ngIf="steps[3] && !steps[4]">
+		<h1>Endereço de entrega</h1>
+
+		<div class="informacoes-endereco">
+			<input type="checkbox" name="endereco" id="">
+			<label for="endereco"> Rua tal de tal, 20, centro, São Paulo</label>
+		</div>
+		<span>Editar endereço</span>
+
+	</div>
+
+	<div class="data-entrega-container" *ngIf="steps[4] && modoEntrega !='delivery' ">
+		<h1>Escolha quando deseja retirar seu pedido:</h1>
+		<div class="form-container">
+
+			<mat-form-field>
+				<mat-label>Dia da semana</mat-label>
+				<select matNativeControl [(ngModel)]="selectDiaSemana">
+					<option *ngFor="let dia of dias" [value]="dia.id">{{dia.name}}</option>
+				</select>
+			</mat-form-field>
+
+			<mat-form-field>
+				<mat-label>Horarios</mat-label>
+				<select matNativeControl [(ngModel)]="selectHorario">
+					<option *ngFor="let hora of horarios" [value]="hora.id">{{hora.hora}}</option>
+				</select>
+			</mat-form-field>
+
+
+
+		</div>
+
+	</div>
+</div>

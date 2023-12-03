@@ -1,0 +1,22 @@
+<section class="container">
+
+	<figure class="image">
+		<img [src]="product.imageUrl" alt="">
+	</figure>
+
+	<article class="item-detalhes">
+
+		<h1>{{ product.nomeProduto}}</h1>
+		<span>{{product.descricao}}</span>
+
+		<div class="price">
+
+			<div class="valor">
+				<strong>{{ product.preco | currency:"BRL"}}</strong>
+			</div>
+
+			<button class="adicionar-btn" (click)="addToCart(product)">Adicionar</button>
+		</div>
+
+	</article>
+</section>

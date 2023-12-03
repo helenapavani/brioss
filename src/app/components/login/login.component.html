@@ -1,0 +1,28 @@
+<div class="login_container">
+
+
+	<div class="form-login">
+		<div class="title">
+			<p class="login-info" *ngIf="registered">Cadastro concluído com sucesso, faça login para continuar</p>
+		</div>
+		<form (ngSubmit)="verificarLogin()" #loginForm="ngForm">
+			<div class="container-input">
+				<input type="email" [(ngModel)]="email" name="email" id="email" placeholder="E-mail">
+				<input type="password" [(ngModel)]="senha" name="password" id="password" placeholder="Digite sua senha">
+				<span class="esqueceu-senha">
+					<a [routerLink]="['/recuperarSenha']">Esqueci minha senha</a>
+				</span>
+			</div>
+
+			<div class="container-btn">
+				<button type="submit">ENTRAR</button>
+			</div>
+			<span>Ainda não tem conta?
+				<a [routerLink]="['/cadastro']">Cadastre-se</a>
+			</span>
+
+		</form>
+
+	</div>
+
+</div>

@@ -1,0 +1,123 @@
+:host {
+	.cadastro_container {
+		max-width: 1440px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 130px 100px;
+		margin: 0 auto;
+
+		.title {
+			margin-bottom: 50px;
+
+			h1 {
+				color: #8c673a;
+				font-size: 30px;
+				font-style: normal;
+				font-weight: 800;
+				line-height: normal;
+			}
+		}
+
+		.form-cadastro {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-direction: column;
+
+			width: 427px;
+			margin: 0 auto;
+
+			form {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+
+				input {
+					display: flex;
+					margin-bottom: 20px;
+
+					padding: 17px 281px 17px 21px;
+					align-items: center;
+
+					border-radius: 5px;
+					border: 2px solid #8c673a;
+
+					background: #faf9f9;
+				}
+
+				.esqueceu-container {
+					margin-top: 10px;
+					display: flex;
+					flex-direction: row;
+					margin-bottom: 70px;
+					align-items: center;
+					justify-content: center;
+
+					label {
+						margin-left: 15px;
+						color: #000;
+
+						font-family: Inter;
+						font-size: 18.5px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: normal;
+					}
+				}
+
+				.container-btn {
+					display: inline-flex;
+					justify-content: flex-end;
+					align-items: center;
+
+					button {
+						border-radius: 5px;
+						border: 1px solid #96652c;
+						width: 258px;
+						height: 39px;
+						background: #8c673a;
+						color: #f6f6f6;
+
+						text-align: center;
+						font-family: Inter;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 600;
+						line-height: normal;
+					}
+				}
+			}
+		}
+
+		.password-input {
+			position: relative;
+		}
+
+		input {
+			padding-right: 30px;
+		}
+
+		.password-toggle {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 10px;
+			cursor: pointer;
+		}
+
+		.password-toggle i {
+			font-size: 18px;
+			color: #555;
+		}
+	}
+
+	@media (max-width: 1300px) {
+		.imagem {
+			display: none !important;
+		}
+	}
+}

@@ -1,0 +1,53 @@
+:host {
+	.header_container {
+		display: flex;
+		max-width: 1440px;
+		height: 175px;
+		background-color: #bf8e54;
+		align-items: center;
+		margin: 0 auto;
+		flex-wrap: wrap;
+		border-radius: 0px 0px 10px 10px;
+
+		.logo-image {
+			width: 192px;
+			height: 175px;
+		}
+
+		.user {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			svg-icon {
+				margin-right: 20px;
+			}
+		}
+
+		.store_field {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin-right: 108px;
+			a {
+				height: 48px;
+				width: 48px;
+			}
+
+			.btn-entrar {
+				width: max-content;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #f9f9f9;
+				font-size: 25px;
+				font-weight: 600;
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+			.store_card {
+				margin-left: 61px;
+			}
+		}
+	}
+}

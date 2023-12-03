@@ -1,0 +1,41 @@
+<header class="header_container" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="column"
+	fxLayoutAlign.xs="start center">
+	<div class="logo_container">
+		<a [routerLink]="['/']">
+			<img src="assets/images/logo.svg" alt=" logo" class="logo-image" />
+		</a>
+
+	</div>
+
+	<div class="store_field" fxLayout="row" fxLayoutAlign="end center">
+
+		<div class="user">
+			<svg-icon src="assets/images/user.svg"></svg-icon>
+
+			<a [routerLink]="estaLogado ? '/' : '/login'" type="button" class="btn-entrar">
+				{{estaLogado? "Olá, ".concat(cliente) :"ENTRAR"}}
+			</a>
+			<button *ngIf="estaLogado" class="menu-perfil" mat-icon-button [matMenuTriggerFor]="menu"
+				aria-label="Example icon-button with a menu">
+				<svg-icon src="assets/images/setabaixo.svg"></svg-icon>
+			</button>
+
+		</div>
+
+		<a [routerLink]="['/carrinho']" class="store_card">
+			<svg-icon src="assets/images/store-card.svg"></svg-icon>
+		</a>
+	</div>
+</header>
+
+<mat-menu #menu="matMenu">
+	<button mat-menu-item [routerLink]="['/perfil']">
+		<span>Editar perfil</span>
+	</button>
+	<button mat-menu-item [routerLink]="['/status']">
+		<span>Histórico de pedidos</span>
+	</button>
+	<button mat-menu-item>
+		<span (click)="sair()">Sair</span>
+	</button>
+</mat-menu>

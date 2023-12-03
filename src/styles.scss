@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~font-awesome/css/font-awesome.css";
+
+@import "./styles/manifest.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Inter;
+}
+
+div:where(.swal2-icon) {
+	user-select: none;
+}

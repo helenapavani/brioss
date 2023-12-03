@@ -1,0 +1,35 @@
+:host {
+	.container {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+
+		p {
+			color: #8c673a;
+			text-align: center;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: normal;
+		}
+
+		.price {
+			color: #41aa00;
+			font-family: Inter;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+		}
+
+		.total {
+			color: #8c673a;
+			text-align: center;
+			font-family: Inter;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: normal;
+		}
+	}
+}

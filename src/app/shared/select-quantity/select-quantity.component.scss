@@ -1,0 +1,49 @@
+:host {
+	.quantidade {
+		display: inline-flex;
+		justify-content: space-between;
+		width: 100px;
+		height: 32px;
+		border-radius: 5px;
+
+		border-radius: 5px;
+		background: #f6f6f6;
+		box-shadow: 0px 4px 4px 0px rgba(150, 101, 44, 0.25);
+
+		background: #fff;
+		input[type="number"]::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+		}
+
+		input[type="number"] {
+			-moz-appearance: textfield;
+			appearance: textfield;
+			height: 32px;
+			width: 40px;
+			border: none !important;
+		}
+
+		.btn-plus {
+			border-radius: 0px 5px 5px 0px;
+			background: #8c673a;
+		}
+		.btn-minus {
+			border-radius: 5px 0px 0px 5px;
+			background: #8c673a;
+		}
+
+		button {
+			width: 33px;
+			height: 32px;
+			border: none !important;
+			width: 24px;
+			background: #8c673a;
+			color: #f6f6f6;
+			font-family: Inter;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<section class="container">
+
+	<figure class="image">
+		<img [src]="cartItem.imageUrl" alt="">
+	</figure>
+
+	<article class="item-detalhes">
+
+		<h1>{{cartItem.nomeProduto}}</h1>
+		<span>{{cartItem.descricao}}</span>
+
+		<div class="price">
+
+			<div class="valor">
+				<strong>{{ calculateTotalPrice() | currency:"BRL"}}</strong>
+			</div>
+
+			<div class="quantidade">
+				<button class="btn-minus" (click)="diminuirQuantidade()">-</button>
+				<input type="number" [(ngModel)]="quantidade" name="quantidades" id="" [value]="cartItem.quantidade" min="0"
+					required>
+				<button class="btn-plus" (click)="aumentarQuantidade()">+</button>
+			</div>
+		</div>
+
+	</article>
+</section>

@@ -1,0 +1,12 @@
+<div class="escolhas" fxLayout="row">
+	<div class="delivery" (click)="escolheModoEntrega('delivery')"
+		[style.background]="modoEntrega.tipo === 'delivery' ? '#96652C' : 'transparent'">
+		<p>Delivery</p>
+		<span>30 - 40 min</span>
+	</div>
+	<div class="local" (click)="escolheModoEntrega('local')"
+		[style.background]="modoEntrega.tipo === 'local' ? '#96652C' : 'transparent'">
+		<p>Retirar no local</p>
+		<span>20 - 30 min</span>
+	</div>
+</div>
